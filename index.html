@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Tailwind CSS</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header Start  -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a
+              href="#home"
+              class="font-bold text-lg text-amber-600 left-14 block py-6"
+              id="name"
+              >@RizkiJuliansyah</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-amber-600 dark:text-white"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-amber-600 dark:text-white"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#gallery"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-amber-600 dark:text-white"
+                    >Gallery</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portofolio"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-amber-600 dark:text-white"
+                    >Portofolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#clients"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-amber-600 dark:text-white"
+                    >Clients</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#blog"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-amber-600 dark:text-white"
+                    >Blog</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-amber-600 dark:text-white"
+                    >Contacs</a
+                  >
+                </li>
+                <li class="mt-4 lg:mt-0 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-amber-600 md:text-xl">
+              Halo Semua 👋, Saya
+              <span
+                class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white"
+                >Rizki Juliansyah</span
+              >
+            </h1>
+            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
+              Mahasiswa &
+              <span class="text-dark dark:text-white" id="rotateText"></span>
+            </h2>
+            <p class="font-medium text-secondary mb-10 leading-relaxed">
+              Belajar Desain Web itu mudah dan menyenangkan bukan.
+              <span class="text-dark font-bold dark:text-white">Bukan!</span>
+            </p>
+            <a
+              href="#contact"
+              class="text-base font-semibold text-white bg-amber-600 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              >Hubungi Saya</a
+            >
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:mt-9 lg:right-0">
+              <img
+                src="img/foto.png"
+                alt="Rizki Juliansyah"
+                
+                class="relative z-10 max-w-full mx-auto"
+              />
+              <span
+                class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125"
+              >
+                <svg
+                  width="500"
+                  height="400"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="#d97706"
+                    d="M70.9,-16.8C79.5,3.4,65.5,37.1,40.2,55.6C14.8,74.1,-21.9,77.4,-40.9,62.2C-60,46.9,-61.4,13.3,-51.6,-8.6C-41.9,-30.4,-20.9,-40.4,5.1,-42C31.2,-43.7,62.4,-37,70.9,-16.8Z"
+                    transform="translate(100 100) scale(1.1)"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pt-36 pb-32 dark:bg-slate-800">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h4 class="font-bold uppercase text-amber-600 text-lg mb-3">
+              Tentang Saya
+            </h4>
+            <h2
+              class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white"
+            >
+              Yuk, Belajar web desain dengan Tailwind CSS!
+            </h2>
+            <p
+              class="font-medium text-base text-secondary max-w-xl lg:text-lg"
+              style="text-align: justify"
+            >
+              Selamat datang di portofolio saya! Saya seorang Mahasiswa Fakultas
+              Ilmu Komputer di Universitas Subang dan Saya seorang pengembang
+              web yang antusias dengan desain modern dan fungsional. Mari
+              eksplorasi Tailwind CSS bersama-sama dan ciptakan proyek luar
+              biasa!
+            </p>
+          </div>
+          <div
+            class="w-full px-4 lg:w-1/2"
+          >
+            <h3
+              class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white"
+            >
+              Mari Berteman
+            </h3>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
+              Saya senang berkolaborasi dan berbagi ide. Jangan ragu untuk
+              menghubungi saya melalui platform sosial berikut!
+            </p>
+            <div class="flex items-center">
+              <!-- Youtube -->
+              <a
+                href="https://www.youtube.com/@rizkijuliansyah"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+                >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/josspe2023/?igsh=YzljYTk1ODg3Zg%3D%3D"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+                >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  />
+                </svg>
+              </a>
+              <!-- Telegram -->
+              <a
+                href="http://t.me/Gejos2112"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" width="35" class="fill-current" viewBox="0 0 32 32">
+                  <title>Telegram</title>
+                  <path d="M16,2c-7.732,0-14,6.268-14,14s6.268,14,14,14,14-6.268,14-14S23.732,2,16,2Zm6.489,9.521c-.211,2.214-1.122,7.586-1.586,10.065-.196,1.049-.583,1.401-.957,1.435-.813,.075-1.43-.537-2.218-1.053-1.232-.808-1.928-1.311-3.124-2.099-1.382-.911-.486-1.412,.302-2.23,.206-.214,3.788-3.472,3.858-3.768,.009-.037,.017-.175-.065-.248-.082-.073-.203-.048-.29-.028-.124,.028-2.092,1.329-5.905,3.903-.559,.384-1.065,.571-1.518,.561-.5-.011-1.461-.283-2.176-.515-.877-.285-1.574-.436-1.513-.92,.032-.252,.379-.51,1.042-.773,4.081-1.778,6.803-2.95,8.164-3.517,3.888-1.617,4.696-1.898,5.222-1.907,.116-.002,.375,.027,.543,.163,.142,.115,.181,.27,.199,.379,.019,.109,.042,.357,.023,.551Z">
+
+                </path></svg>
+              </a>
+              <!-- Tiktok -->
+              <a
+                href="https://www.tiktok.com/@beryypop27?_t=ZS-8spek4Nqq5n&_r=1"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/rizky.juliansyah.90226"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 32 32" class="fill-current">
+                <path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z">
+<title>Facebook</title>
+              </path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Gallery Section Start -->
+    <section id="gallery" class="pt-36 pb-32 bg-slate-600 dark:bg-dark">
+            <div class="container">
+                <div class="w-full px-4">
+                    <div class="mx-auto text-center mb-16">
+                        <h4 class="font-semibold text-lg text-amber-600 mb-2">Gallery</h4>
+                        <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">
+                            Gallery Saya
+                        </h2>
+                        <p class="font-medium text-md text-secondary md:text-lg">
+                            Berisi foto saya sendiri.
+                        </p>
+                    </div>
+                </div>
+                <section>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="img/gallery/foto1.jpg" alt="Image1"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto2.jpg" alt="Image2"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto3.jpg" alt="Image3"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto4.jpg" alt="Image4"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto5.jpg" alt="Image5"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto6.jpg" alt="Image6"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto7.jpg" alt="Image7"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto8.jpg" alt="Image8"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto9.jpg" alt="Image9"></div>
+                        <div class="gallery-item"><img src="img/gallery/foto10.jpg" alt="Image10"></div>
+                    </div>
+                </section>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portofolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
+                <div class="container">
+                    <div class="w-full px-4">
+                        <div class="max-w-xl mx-auto text-center mb-16">
+                            <h4 class="font-semibold text-lg text-amber-600 mb-2">Portofolio</h4>
+                            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">
+                                Project Terbaru
+                            </h2>
+                            <p class="font-medium text-md text-secondary md:text-lg">
+                                Berikut adalah beberapa proyek terbaru yang telah saya kerjakan. Dari landing page hingga galeri sederhana, setiap karya dirancang untuk memberikan pengalaman terbaik kepada pengguna.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+                        <div class="mb-12 p-4 md:w-1/2">
+                            <div class="rounded-md shadow-md overflow-hidden">
+                                <img src="img/portofolio/1.png" alt="Landing Page" width="w-full" />
+                            </div>
+                            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">
+                                Landing Page
+                            </h3>
+                            <p class="font-medium text-base text-secondary">
+                                Desain landing page yang responsif dan menarik, dirancang untuk kebutuhan bisnis Anda.
+                            </p>
+                        </div>
+                        <div class="mb-12 p-4 md:w-1/2">
+                            <div class="rounded-md shadow-md overflow-hidden">
+                                <img src="img/portofolio/2.png" alt="Gallery" width="w-full" />
+                            </div>
+                            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">
+                                Simple Gallery
+                            </h3>
+                            <p class="font-medium text-base text-secondary">
+                                Galeri sederhana dengan tampilan elegan, cocok untuk menampilkan portofolio atau koleksi gambar Anda
+                            </p>
+                        </div>
+                        <div class="mb-12 p-4 md:w-1/2">
+                            <div class="rounded-md shadow-md overflow-hidden">
+                                <img src="img/portofolio/3.png" alt="Dark Mode" width="w-full" />
+                            </div>
+                            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">
+                                Coba Dark Mode
+                            </h3>
+                            <p class="font-medium text-base text-secondary">
+                                Mode gelap yang fleksibel, memberikan pengalaman pengguna yang nyaman untuk semua kondisi.
+                            </p>
+                        </div>
+                        <div class="mb-12 p-4 md:w-1/2">
+                            <div class="rounded-md shadow-md overflow-hidden">
+                                <img src="img/portofolio/4.png" alt="Web Portfolio" width="w-full" />
+                            </div>
+                            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">
+                                Web Portfolio
+                            </h3>
+                            <p class="font-medium text-base text-secondary">
+                                Portofolio web pribadi yang informatif, menampilkan keahlian dan proyek terbaik saya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- Portofolio Section End -->
+
+    <!-- Clients Section Start -->
+    <section id="clients" class="pt-36 pb-32 bg-slate-600 dark:bg-dark">
+            <div class="container">
+                <div class="w-full px-4">
+                    <div class="mx-auto text-center mb-16">
+                        <h4 class="font-semibold text-lg text-amber-600 mb-2">Clients</h4>
+                        <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">
+                            Yang Pernah Bekerjasama
+                        </h2>
+                        <p class="font-medium text-md text-secondary md:text-lg">
+                            Saya bangga telah menjalin kerja sama dengan berbagai perusahaan terkemuka di dunia. Dukungan mereka membantu Saya untuk terus berkembang dan memberikan solusi terbaik bagi pelanggan Saya. Berikut adalah beberapa mitra yang telah bekerja sama dengan Saya
+                            dalam berbagai proyek inovatif.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full px-4">
+                    <div class="flex flex-wrap items-center justify-center">
+                        <a class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8" href="https://uin-alauddin.ac.id/tulisan/detail/judi-online-dalam-sorotan-islam---membongkar-bahaya-dan-hukum-syariah-0724">
+                            <img src="img/clients/toto12.png" alt="toto12" />
+                        </a>
+                        <a href="https://yandex.com/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                            <img src="img/clients/yandex.png" alt="Yandex" />
+                        </a>
+                        <a href="https://www.detik.com/hikmah/khazanah/d-7424982/larangan-nonton-film-dewasa-dalam-islam-dan-efeknya-bagi-kesehatan" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                            <img src="img/clients/pornhub.png" alt="Pornhub" />
+                        </a>
+                        <a href="https://www.xtcindonesia.com/" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                            <img src="img/clients/Xtc.png" alt="Xtc" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Clients Section End -->
+
+    <!-- Blog Section Start -->
+    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-800">
+                <div class="container">
+                    <div class="w-full px-4">
+                        <div class="max-w-xl mx-auto text-center mb-16">
+                            <h4 class="font-semibold text-lg text-amber-600 mb-2">Blog</h4>
+                            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">
+                                Tulisan Terkini
+                            </h2>
+                            <p class="font-medium text-md text-secondary md:text-lg">
+                                Temukan berbagai artikel menarik dan informatif seputar dunia teknologi, desain web, dan pengembangan diri sebagai programmer. Kami menghadirkan konten terbaru yang relevan untuk membantu Anda belajar dan berkembang
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="w-full px-4 lg:w-1/3 xl:1/3">
+                            <div class="card bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-dark">
+                                <img src="img/tailwind.png" alt="Blog 1" class="w-full" />
+                                <div class="py-8 px-6">
+                                    <h3>
+                                        <a href="https://youtube.com/playlist?list=PLFIM0718LjIUHFRMzPJ0wGjx9_NlC5d1h&si=hUhZ5oaa5pQDTcP6" class="block mb-3 font-semibold text-xl text-dark hover:text-amber-600 truncate dark:text-white dark:hover:text-amber-600">Belajar Tailwind CSS</a
+                      >
+                    </h3>
+                    <p
+                      style="text-align: justify"
+                      class="font-medium text-base text-dark mb-6 dark:text-white"
+                    >
+                      Tailwind CSS merupakan framework CSS yang berbasis utility
+                      untuk membuat UI atau tampilan dari aplikasi web.
+                      </p>
+                    <a
+                      href="https://www.petanikode.com/tailwind-dasar/"
+                      class="font-medium text-sm text-white bg-amber-600 py-2 px-4 rounded-lg hover:opacity-80"
+                      >Baca Selengkapnya</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="w-full px-4 lg:w-1/3 xl:1/3">
+                <div
+                  class="card bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-dark">
+                  <img src="img/utility.png" alt="Blog 2" class="w-full" />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="https://youtu.be/_38OWbFYYh4?si=hcKhkO8Hqq0Ax2qg"
+                        class="block mb-3 font-semibold text-xl text-dark hover:text-amber-600 truncate dark:text-white dark:hover:text-amber-600"
+                        >Mudah menguasai Utility pada Tailwind CSS</a
+                      >
+                    </h3>
+                    <p
+                      style="text-align: justify"
+                      class="font-medium text-base text-dark mb-6 dark:text-white"
+                    >
+                      Utility-first CSS adalah pendekatan dalam penulisan kode CSS
+                      di mana pengembang menggunakan kelas-kelas utilitas untuk
+                      langsung menerapkan gaya pada elemen HTML.
+                      </p>
+                    <a
+                      href="https://rumahcoding.co.id/memahami-konsep-utility-first-dalam-tailwind-css-prinsip-dasar-dan-penerapannya/"
+                      class="font-medium text-sm text-white bg-amber-600 py-2 px-4 rounded-lg hover:opacity-80"
+                      >Baca Selengkapnya</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="w-full px-4 lg:w-1/3 xl:1/3">
+                <div
+                  class=" card bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-dark">
+                  <img src="img/programer.png" alt="Blog 3" class="w-full" />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="https://youtu.be/A2rj60uKFyc?si=7vluMcH8rFooMABw"
+                        class="block mb-3 font-semibold text-xl text-dark hover:text-amber-600 truncate dark:text-white dark:hover:text-amber-600"
+                        >Cara menjadi programmer mahir</a
+                      >
+                    </h3>
+                    <p
+                      style="text-align: justify"
+                      class="font-medium text-base text-dark mb-6 dark:text-white"
+                    >
+                      Programmer identik dengan beraktivitas di malam hari tapi
+                      tidak sedikit juga programmer yang baru bisa berkegiatan di
+                      pagi hari. Kedua kubu tersebut memiliki alasan yang cukup
+                      mirip karena pada jam-jam tersebut suasananya masih tenang dan
+                      tenteram.
+                    </p>
+                    <a
+                      href="https://www.dicoding.com/blog/cara-bangun-kebiasaan-programming-setiap-hari/"
+                      class="font-medium text-sm text-white bg-amber-600 py-2 px-4 rounded-lg hover:opacity-80"
+                      >Baca Selengkapnya</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- Blog Section End -->
+
+       <!-- Contact Section Start -->
+       <section id="contact" class="pt-36 pb-32 dark:bg-dark">
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-16">
+              <h4 class="font-semibold text-lg text-amber-600 mb-2">Contact</h4>
+              <h2
+                class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
+              >
+                Hubungi Kami
+              </h2>
+              <p class="font-medium text-md text-secondary md:text-lg">
+                Jika Anda memiliki pertanyaan, saran, atau ingin bekerja sama, jangan ragu untuk menghubungi kami melalui formulir di bawah ini. Kami siap membantu Anda!
+              </p>
+            </div>
+          </div>
+          <form>
+            <div class="w-full lg:w-2/3 lg:mx-auto">
+              <div class="w-full px-4 mb-8" >
+                <label for="name" class="text-base font-bold text-amber-600"
+                  >Nama</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-amber-600 focus:ring-1 focus:border-amber-600"
+                />
+              </div>
+              <div class="w-full px-4 mb-8">
+                <label for="email" class="text-base font-bold text-amber-600"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-amber-600 focus:ring-1 focus:border-amber-600"
+                />
+              </div>
+              <div class="w-full px-4 mb-8" data-aos="fade-right">
+                <label for="message" class="text-base font-bold text-amber-600"
+                  >Pesan</label
+                >
+                <textarea
+                  type="message"
+                  id="message"
+                  
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-amber-600 focus:ring-1 focus:border-amber-600 h-32"
+                ></textarea>
+              </div>
+              <div class="w-full px-4" ></div>
+                <button
+                  class="text-base font-semibold text-white bg-amber-600 py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500"
+                >
+                  Kirim
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- Contact Section End -->
+
+        <!-- Footer Start -->
+    <footer class="bg-dark pt-24 pb-12 ">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+            <h2 class="font-bold text-3xl text-white mb-5">
+              Fakultas Ilmu Komputer
+            </h2>
+            <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
+           <span> 
+            <a target="_blank"> 
+            robbyalijuliansyah05@gmail.com
+          </a>
+                                    </span>
+                                    <p>Dusun Cikur Desa Wanasari Kecamatan Cipunagara</p>
+                                    <p>Subang</p>
+                            </div>
+                            <div class="w-full px-4 mb-12 md:w-1/3" >
+                                <h3 class="font-semibold text-xl text-white mb-5">
+                                    Kategori Tulisan
+                                </h3>
+                                <ul class="text-slate-300">
+                                    <li>
+                                        <a href="#" class="inline-block text-base hover:text-amber-600 mb-3">Programming</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >Teknologi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >Gaya Hidup</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+            <ul class="text-slate-300" >
+              <li>
+                <a
+                  href="#home"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portofolio"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >Portofolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#clients"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >Clients</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="inline-block text-base hover:text-amber-600 mb-3"
+                  >Contacs</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full pt-10 border-t border-slate-700" >
+          <div class="flex items-center justify-center mb-5">
+            <!-- Youtube -->
+            <a
+              href="https://www.youtube.com/@rizkijuliansyah"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>YouTube</title>
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+                                        <!-- Instagram -->
+                                        <a href="https://www.instagram.com/josspe2023/?igsh=YzljYTk1ODg3Zg%3D%3D" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                />
+              </svg>
+                                        </a>
+                                         <!-- Telegram -->
+              <a
+              href="http://t.me/Gejos2112"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" role="img" width="35" class="fill-current" viewBox="0 0 32 32">
+                <title>Telegram</title>
+                <path d="M16,2c-7.732,0-14,6.268-14,14s6.268,14,14,14,14-6.268,14-14S23.732,2,16,2Zm6.489,9.521c-.211,2.214-1.122,7.586-1.586,10.065-.196,1.049-.583,1.401-.957,1.435-.813,.075-1.43-.537-2.218-1.053-1.232-.808-1.928-1.311-3.124-2.099-1.382-.911-.486-1.412,.302-2.23,.206-.214,3.788-3.472,3.858-3.768,.009-.037,.017-.175-.065-.248-.082-.073-.203-.048-.29-.028-.124,.028-2.092,1.329-5.905,3.903-.559,.384-1.065,.571-1.518,.561-.5-.011-1.461-.283-2.176-.515-.877-.285-1.574-.436-1.513-.92,.032-.252,.379-.51,1.042-.773,4.081-1.778,6.803-2.95,8.164-3.517,3.888-1.617,4.696-1.898,5.222-1.907,.116-.002,.375,.027,.543,.163,.142,.115,.181,.27,.199,.379,.019,.109,.042,.357,.023,.551Z">
+
+              </path></svg>
+            </a>
+            <!-- Tiktok -->
+            <a
+              href="https://www.tiktok.com/@beryypop27?_t=ZS-8spek4Nqq5n&_r=1"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>TikTok</title>
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                />
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/rizky.juliansyah.90226"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-amber-600 hover:bg-amber-600 hover:text-white"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 32 32" class="fill-current">
+              <path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z">
+<title>Facebook</title>
+            </path></svg>
+            </a>
+                            </div>
+                            <p class="font-medium text-sm text-slate-500 text-center">
+                                Dibuat dengan <span class="text-amber-600">❤️</span> oleh
+                                <a href="http://instagram.com/robbyalijuliansyah" target="_blank" class="font-bold text-amber-600">Rizki Juliansyah</a
+            >, menggunakan
+            <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              class="font-bold text-sky-500"
+              >Tailwind CSS 3</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="src/script.js"></script>
+  </body>
+</html>
